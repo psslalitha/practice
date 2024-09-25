@@ -1,0 +1,13 @@
+---
+- name: Install Git and Python3
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Git and Python3
+      apt:
+        name:
+          - git
+          - python3
+        state: present
+        update_cache: yes
+
